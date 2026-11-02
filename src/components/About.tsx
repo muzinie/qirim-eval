@@ -12,9 +12,10 @@ const LANGS = [
 ]
 
 const PATH = [
-  { role: 'AI data specialist', where: 'Appen', text: 'Rated and categorised multilingual text for machine-learning projects.' },
+  { role: 'AI data specialist', where: 'Appen', text: 'Reviewed Crimean Tatar sentences for a language-technology project: grammar, meaning, spelling, and Turkish or Russian words that did not belong.' },
+  { role: 'Translator and interpreter', where: 'Terciman Translation & Interpreting · since 2014', text: 'Translation and interpreting between Crimean Tatar, Turkish, Russian, Ukrainian and English.' },
   { role: 'Language instructor', where: 'Graybridge Malkam, Ottawa', text: 'Taught Turkish, Russian and Ukrainian to diplomats; built materials and proficiency assessments.' },
-  { role: 'Simultaneous interpreter', where: 'Turkish Ministry of Culture and Tourism, Ukraine', text: 'Turkish–Ukrainian interpreting at official events.' },
+  { role: 'Simultaneous interpreter', where: 'Turkish Ministry of Culture and Tourism, Crimea', text: 'Turkish–Ukrainian and Turkish–Russian interpreting for senior Turkish officials and their delegations.' },
   { role: 'PhD in Languages', where: 'Taurida V. I. Vernadsky National University', text: 'Also an MA and BA in Turkish language and literature.' },
 ]
 
@@ -65,8 +66,8 @@ export default function About() {
               {a.name}, <span className="text-sky">PhD</span>
             </h2>
             <p className="mt-6 max-w-[680px] text-[18px] leading-[1.65] text-ink-soft">
-              Multilingual linguist and AI language evaluator based in {a.location}. A native Crimean Tatar speaker who can hear the difference between
-              Crimean Tatar, Kazan Tatar and Turkish — the exact difference language models miss.
+              Multilingual linguist and AI language evaluator based in {a.location}. A native Crimean Tatar speaker of the central dialect, the one the literary
+              language is built on, who hears at once when Turkish or Russian slips in — the exact difference language models miss.
             </p>
           </Reveal>
 

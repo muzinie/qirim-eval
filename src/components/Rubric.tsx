@@ -16,7 +16,7 @@ const FLUENCY = [
   'Natural, one small error.',
   'Reads as if a native speaker wrote it.',
 ]
-const DRIFT = ['No words from another language.', 'One or two Turkish, Kazan Tatar or Russian words.', 'A large part of the answer is in another language.']
+const DRIFT = ['No words from another language.', 'One or two Turkish, Russian or other foreign words.', 'A large part of the answer is in another language.']
 
 // abstract "sentence": word widths in px; which words turn amber at each drift level
 const WORDS = [64, 38, 92, 52, 70, 44, 86, 58, 40]

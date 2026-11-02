@@ -169,7 +169,7 @@ export default function Hero() {
           className="mt-8 max-w-[580px] text-[19px] leading-[1.6] text-ink-soft"
         >
           An open, human-written benchmark by a native-speaker linguist. It tests ChatGPT, Claude and Gemini on translation, grammar, script and culture —
-          and shows exactly where they slip into Turkish or Kazan Tatar.
+          and shows exactly where they slip into Turkish or Russian.
         </motion.p>
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="mt-9 flex flex-wrap gap-3">
           <a href="#results" className="btn-primary no-underline group">

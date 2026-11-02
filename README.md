@@ -39,7 +39,7 @@ All content lives in `src/data/`. Edit these files on GitHub (pencil icon) and t
     {
       "name": "ChatGPT", "version": "[model version]", "date": "2026-11-15",
       "total": 6.4, "meaning": 3.3, "fluency": 3.1, "answeredInCrh": 0.82,
-      "turkish": 0.41, "kazan": 0.07, "russian": 0.03
+      "turkish": 0.41, "russian": 0.07, "other": 0.03
     }
   ]
 }
@@ -63,7 +63,7 @@ All content lives in `src/data/`. Edit these files on GitHub (pencil icon) and t
 ]
 ```
 
-`type` is one of `turkish`, `kazan`, `russian`, `invented`. Words listed in `highlight` are marked in the answer.
+`type` is one of `turkish`, `russian`, `other`, `invented`. Words listed in `highlight` are marked in the answer.
 
 ### Photo and résumé
 
@@ -71,7 +71,6 @@ Upload `muzinie.jpg` and `resume.pdf` to the `public/` folder, then set `"photo"
 
 ## Before going public — please check
 
-- The word "language" in the hero: Crimean Tatar **til**, Kazan Tatar **tel**, Turkish **dil** (`src/components/Hero.tsx`).
 - The alphabet letters and the notes on Q, Ñ and Ğ (`src/components/Alphabet.tsx`).
 - Experience entries and wording in `src/components/About.tsx`.
 - Choose a licence for the dataset and for this code.

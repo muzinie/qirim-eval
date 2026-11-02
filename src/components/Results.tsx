@@ -12,11 +12,11 @@ type ModelResult = {
   fluency: number // 1–5
   answeredInCrh: number // 0–1
   turkish: number // share of answers with Turkish mixed in, 0–1
-  kazan: number
+  other: number // any other language, e.g. Ukrainian or English
   russian: number
 }
 type Results = { updated: string | null; ratings: number; models: ModelResult[] }
-type ErrorExample = { type: 'turkish' | 'kazan' | 'russian' | 'invented'; item: string; model: string; output: string; highlight: string[]; correct: string; why: string }
+type ErrorExample = { type: 'turkish' | 'russian' | 'other' | 'invented'; item: string; model: string; output: string; highlight: string[]; correct: string; why: string }
 
 const results = resultsRaw as Results
 const errors = errorsRaw as ErrorExample[]
@@ -69,8 +69,8 @@ function ModelCard({ r }: { r: ModelResult }) {
       <p className="mt-6 mb-3 text-[12px] font-semibold uppercase tracking-[0.06em] text-ink-muted">Answers with another language mixed in</p>
       <div className="grid gap-2.5">
         <DriftBar label="Turkish" value={r.turkish} color="#C98A1B" />
-        <DriftBar label="Kazan Tatar" value={r.kazan} color="#6E5AA8" />
         <DriftBar label="Russian" value={r.russian} color="#2F4F68" />
+        <DriftBar label="Other" value={r.other} color="#6E5AA8" />
       </div>
     </Spotlight>
   )
@@ -88,7 +88,7 @@ function EmptyCard({ name }: { name: string }) {
       <div className="mt-2 h-2 rounded-full skeleton" />
       <p className="mt-6 mb-3 text-[12px] font-semibold uppercase tracking-[0.06em] text-ink-muted">Answers with another language mixed in</p>
       <div className="grid gap-3">
-        {['Turkish', 'Kazan Tatar', 'Russian'].map((l) => (
+        {['Turkish', 'Russian', 'Other'].map((l) => (
           <div key={l} className="grid grid-cols-[92px_1fr] items-center gap-3 text-[13px]">
             <span className="text-ink-muted">{l}</span>
             <div className="h-2.5 rounded-full skeleton" />
@@ -101,8 +101,8 @@ function EmptyCard({ name }: { name: string }) {
 
 const ERR_STYLE: Record<ErrorExample['type'], { label: string; chip: string; mark: string }> = {
   turkish: { label: 'Turkish interference', chip: 'bg-amber-soft text-amber-text', mark: 'bg-amber-mark text-[#5C3A00]' },
-  kazan: { label: 'Kazan Tatar mix-up', chip: 'bg-plum-soft text-plum-text', mark: 'bg-plum-mark text-[#3A2C63]' },
   russian: { label: 'Russian word', chip: 'bg-sky-soft text-sky-deep', mark: 'bg-[#DDE8F0] text-[#1D3A52]' },
+  other: { label: 'Other-language word', chip: 'bg-plum-soft text-plum-text', mark: 'bg-plum-mark text-[#3A2C63]' },
   invented: { label: 'Invented fact', chip: 'bg-rust-soft text-rust-text', mark: 'bg-rust-soft text-rust-text' },
 }
 
@@ -126,7 +126,7 @@ function Highlighted({ text, words, mark }: { text: string; words: string[]; mar
 }
 
 function Errors() {
-  const ghosts: ErrorExample['type'][] = ['turkish', 'kazan', 'invented']
+  const ghosts: ErrorExample['type'][] = ['turkish', 'russian', 'invented']
   return (
     <section id="errors" className="mx-auto max-w-[1200px] px-5 sm:px-6 py-24">
       <SectionHead
