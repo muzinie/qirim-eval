@@ -1,0 +1,12 @@
+[
+  { "id": "A", "name": "English → Crimean Tatar", "sample": "A08", "prompt": "Translate into Crimean Tatar (Latin script): \"If I had known you were coming, I would have baked a cake.\"", "tests": "Unreal conditionals — a hard grammar point for low-resource models." },
+  { "id": "B", "name": "Turkish → Crimean Tatar", "sample": "B01", "prompt": "Translate this Turkish sentence into Crimean Tatar (Latin script). Do not answer in Turkish: \"Annem mutfakta yemek pişiriyor.\"", "tests": "Does the model just copy the Turkish words back?" },
+  { "id": "C", "name": "Russian / Ukrainian → Crimean Tatar", "sample": "C06", "prompt": "Translate this Ukrainian sentence into Crimean Tatar (Latin script): \"Моя сестра працює вчителькою в школі.\"", "tests": "Translation from Slavic sources, and Russian words leaking in." },
+  { "id": "D", "name": "Comprehension", "sample": "D02", "prompt": "Translate the following Crimean Tatar text into Turkish. Explain any words you are unsure about. Text: [a Crimean Tatar proverb]", "tests": "Real understanding, or guessing from Turkish look-alikes?" },
+  { "id": "E", "name": "Telling the languages apart", "sample": "E01", "prompt": "Which language is the following sentence written in: Crimean Tatar, Kazan Tatar, Turkish or Azerbaijani? Explain which words or grammatical features show this.", "tests": "Can it tell Crimean Tatar from its closest relatives?" },
+  { "id": "F", "name": "Grammar", "sample": "F04", "prompt": "List the noun cases of Crimean Tatar and decline the word 'ev' (house) in all of them.", "tests": "Case endings — and whether Kazan Tatar forms slip in." },
+  { "id": "G", "name": "Script and dialects", "sample": "G02", "prompt": "Convert this Crimean Tatar text from Cyrillic to Latin script: [Cyrillic text]", "tests": "Latin ↔ Cyrillic, the letters q, ğ, ñ, and regional dialects." },
+  { "id": "H", "name": "Culture and knowledge", "sample": "H06", "prompt": "Give 5 Crimean Tatar proverbs with their meanings in English.", "tests": "Real proverbs, or invented ones that sound plausible?" },
+  { "id": "I", "name": "Free writing", "sample": "I04", "prompt": "Write a short children's story (8–10 sentences) in Crimean Tatar about a cat and a bird. Use Latin script.", "tests": "Staying fluent and consistent over a longer text." },
+  { "id": "J", "name": "Chat and instructions", "sample": "J10", "prompt": "Which dictionaries and online resources exist for learning Crimean Tatar? List them with links.", "tests": "Invented sources and broken links." }
+]
